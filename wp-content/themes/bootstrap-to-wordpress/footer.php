@@ -30,24 +30,24 @@
 		<footer>
 			<div class="container">
 				<div class="col-sm-3">
-					<p><a href='#'><img src='assets/img/logo.png' alt='bootstrap to wordpress'></a></p>
+					<p><a href='#'><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to Wordpress"></a></p>
 				</div><!-- col end -->
 				
 				<div class="col-sm-6">
-					<nav>
-						<ul class="list-unstyled list-inline">
-							<li><a href="">Home</a></li>
-							<li><a href="">Blog</a></li>
-							<li><a href="">Resources</a></li>
-							<li><a href="">Contact</a></li>
-							<li class='signup-link'><a href="">Sign Up now</a></li>
-						</ul>
+					<?php 
+							wp_nav_menu( array (
 
-					</nav>
+								'theme_location'	=> 'footer',
+								'container'	=> 'nav',
+								'menu_class'	=> 'list-unstyled list-inline'
+
+								) );
+
+						?>
 				</div>
 
 				<div class="col-sm-3">
-					<p class="pull-right"> &copy; 2015 Brad Hussey</p>
+					<p class="pull-right"> <?php bloginfo('name'); ?> &copy; <?php echo date('Y') ?> </p>
 				</div>
 
 				</div><!-- col end -->

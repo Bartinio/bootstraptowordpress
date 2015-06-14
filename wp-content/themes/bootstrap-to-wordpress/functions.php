@@ -43,6 +43,7 @@ function bootstrap_to_wordpress_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'bootstrap-to-wordpress' ),
+		'footer' => esc_html__( 'Footer Menu', 'bootstrap-to-wordpress' ),
 	) );
 
 	/*
@@ -99,6 +100,16 @@ function bootstrap_to_wordpress_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bootstrap-to-wordpress' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Extra Sidebar', 'bootstrap-to-wordpress' ),
+		'id'            => 'sidebar-2',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

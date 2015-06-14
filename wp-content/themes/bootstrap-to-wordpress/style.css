@@ -314,6 +314,11 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 
+.navbar-nav > li.current-menu-item a,
+.navbar-nav > li.current_page_item a {
+	color: white;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
